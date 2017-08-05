@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "lint": "eslint src/*.js",
+    "lint": "eslint src/**",
     "lint:staged": "lint-staged",
     "watch": "babel -w -d ./lib ./src",
-    "test:watch": "jest --watch --coverage"
+    "test:watch": "jest --watch --coverage",
+    "build": "rm -rf lib/* && babel src --ignore *.spec.js --out-dir lib",
+    "prepublish": "npm run build"
   },
   "author": "",
   "license": "ISC",
