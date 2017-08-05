@@ -1,6 +1,6 @@
 # Repository about test Internship Entria
 
-For study, i wrote the challenge of Entria, if you want to see requireds, click (https://github.com/entria/jobs/blob/master/internship/challenge.md)[here]
+For study, i wrote the challenge of Entria, if you want to see project own, click [https://github.com/entria/jobs/blob/master/internship/challenge.md](here)
 
 ## Internship Challenge
 
