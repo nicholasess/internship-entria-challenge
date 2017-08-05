@@ -10,10 +10,10 @@ For study, i wrote the challenge of Entria, if you want to see project own, clic
 - [x] it should be open sourced on your github repo
 
 ## Extras
-- [ ] configure babel
+- [x] configure babel
 - [ ] configure eslint
 - [ ] configure prettier
-- [ ] use async await
+- [x] use async await
 - [x] transform response to something more readable
 - [ ] configure and use flowtype
 - [x] add tests

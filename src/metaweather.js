@@ -1,12 +1,14 @@
 'use strict';
-
-const fetch = require('node-fetch')
+import 'babel-polyfill';
+import fetch from 'node-fetch'
 const err_message = {
 	"err": "Not has city!"
 }
 
 let prettyJson = (data) => {
-	return JSON.stringify(data, null, 2)
+	let json = JSON.stringify(data, null, 2)
+	console.log(json)
+	return json;
 }
 
 let api = (city) => {
@@ -17,26 +19,29 @@ let hasArgs = (city) => {
 	return city !== null && city.length > 0
 }
 
-let fetchApi = (url) =>{
-	return fetch(url).then((data) => {
-		return data.json()
-	})
+let fetchApi = async (url) => {
+	let data = await fetch(url)
+	return data.json()
 }
 
-let execute = (argv) => {
+let execute = async (argv) => {
 
 if(hasArgs(argv.city)){
 	let url = api(argv.city)
-	fetchApi(url).then((data) => {
-		console.log(prettyJson(data))
-	})	
+	let data = await fetchApi(url)
+	prettyJson(data)
+	return data;
+		
 }else{
-	console.log(prettyJson(err_message))
+	prettyJson(err_message)
 }
 
 }
 
-exports.api = api
-exports.hasArgs = hasArgs
-exports.fetchApi = fetchApi
-exports.execute = execute
+export {
+	api,
+	hasArgs,
+	fetchApi,
+	execute,
+	prettyJson
+}

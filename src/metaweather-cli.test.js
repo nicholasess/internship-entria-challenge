@@ -24,6 +24,17 @@ describe('Test of Metaweather', () => {
 		})
 		
 	})
+
+	test('Test cli metaweather', () => {
+		metaweather.execute({city: 'São Paulo'})
+		.then((data) => {
+			expect(data).toEqual(expect.arrayContaining(expected));	
+		})
+	})
+
+	// test('Pretty console log', () => {
+	// 	expect(metaweather.prettyJson({name: "Nicholas"})).toBe('string')
+	// })
 })
 
 
