@@ -1,0 +1,23 @@
+{
+  "name": "internship-entria",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^1.7.1",
+    "yargs": "^8.0.2"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^4.4.0",
+    "jest": "^20.0.4",
+    "prettier": "^1.5.3"
+  }
+}
