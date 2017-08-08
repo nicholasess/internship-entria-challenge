@@ -8,26 +8,26 @@ const err_message = {
 	title: "Not has city!"
 };
 
-let prettyJson = (data: { title: string }) => {
+export const prettyJson = (data: { title: string }) => {
 	let json = JSON.stringify(data, null, 2);
 	console.log(json);
 	return json;
 };
 
-let api = (city: string) => {
+export const api = (city: string) => {
 	return `https://www.metaweather.com/api/location/search/?query=${city}`;
 };
 
-let hasArgs = (city: string) => {
+export const hasArgs = (city: string) => {
 	return city !== null && city.length > 0;
 };
 
-let fetchApi = async (url: string) => {
+export const fetchApi = async (url: string) => {
 	let data = await fetch(url);
 	return data.json();
 };
 
-let execute = async (argv: { city: string }) => {
+export const execute = async (argv: { city: string }) => {
 	if (hasArgs(argv.city)) {
 		let url = api(argv.city);
 		let data = await fetchApi(url);
@@ -37,5 +37,3 @@ let execute = async (argv: { city: string }) => {
 		prettyJson(err_message);
 	}
 };
-
-export { api, hasArgs, fetchApi, execute, prettyJson };
