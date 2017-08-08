@@ -11,7 +11,7 @@ For study, i wrote the challenge of Entria, if you want to see project own, clic
 
 ## Extras
 - [x] configure babel
-- [ ] configure eslint
+- [x] configure eslint
 - [x] configure prettier
 - [x] use async await
 - [x] transform response to something more readable
