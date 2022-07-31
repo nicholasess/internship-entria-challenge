@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-fetch": "^1.7.1",
+    "node-fetch": "^3.2.10",
     "yargs": "^8.0.2"
   },
   "lint-staged": {
